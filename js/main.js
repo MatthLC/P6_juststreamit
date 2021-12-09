@@ -1,4 +1,3 @@
-
 /*Initialize image, title and modal box for banner*/
 banner_title();
 
