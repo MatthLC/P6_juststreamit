@@ -7,7 +7,7 @@ Get the film's image.
 Set the modal window with information about the film.
 */
 async function all_carousel(){
-	let all_films = await Promise.all([carousel(0,"topfilm",1),carousel(1,"adult",0),	carousel(2,"animation",0),	carousel(3,"Sci-Fi",0)]);
+	let all_films = await Promise.all([carousel(0,"topfilm",1),carousel(1,category1,0),	carousel(2,category2,0),	carousel(3,category3,0)]);
 };
 all_carousel()
 

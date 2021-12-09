@@ -1,0 +1,13 @@
+{
+  "name": "juststreamit",
+  "version": "1.0.0",
+  "description": "Plateforme de streaming",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css compressed",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "author": "MLC",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+}

@@ -1,0 +1,16 @@
+#header__nav{
+	display: flex;
+	list-style-type: none;
+	margin-right: 200px;
+}
+
+.nav-item{
+	margin-right: 30px;
+	font-size: 20px;
+	text-decoration: none;
+	color: $text_înside_element;
+	@include undo_transition;
+	&:hover{
+		@include do_transition
+	}
+}

@@ -1,91 +1,14 @@
+   /***********************/
+  /* Carousel parameters */
+ /*_____________________*//*___________________________________________*/
+let carousel_title = document.getElementsByClassName("carousel-title")
+let left = document.getElementsByClassName("button-slide--left");
+let right = document.getElementsByClassName("button-slide--right");
+let number_of_slide = 7;
+/*_____________________*//*___________________________________________*/
+
+
 /* Carousel function */
-
-/* Set the fist letter of the sentence in uppercase */
-function capitalizer(sentence){
-	result = sentence.charAt(0).toUpperCase() + sentence.slice(1);
-	return result;
-}
-
-/**************************************************************
-- create element for each film for the selected category 
-- set the backgroundimage
-- set the title for each category selected except for topfilm
-***************************************************************/
-function film(image_url, carousel_number, genre){
-	div = document.createElement('div');
-	div.classList.add("film");
-	div.style.backgroundImage = "url('"+image_url+"')";
-	container[carousel_number].appendChild(div);
-
-	if (genre != "topfilm"){
-		carousel_title[carousel_number].innerText = capitalizer(genre);	
-	}
-}
-
-/**************************************************************
-Get the information for the modal window:
-	-title, genres, description...
-***************************************************************/
-function information(div, film_id){
-	div.addEventListener("click", function(){
-		modal.style.display = "flex";
-										
-		fetch("http://localhost:8000/api/v1/titles/".concat(film_id))
-			.then(function(response){
-				if(response.ok){
-					return response.json();
-				}
-			})
-			.then(function(data){
-				modal_content_image.style.backgroundImage = "url('"+data.image_url+"')";
-				modal_content_title.innerText = data.title;
-				modal_content_genre.innerText = data.genres;
-				modal_content_published.innerText = data.date_published;
-				modal_content_rated.innerText = data.rated;
-				modal_content_imdb.innerText = data.imdb_score;
-				modal_content_directors.innerText = "Réalisateur : " + data.directors;
-				modal_content_actors.innerText = data.actors;
-				
-				modal_content_countries.innerText = data.countries;
-				modal_content_boxoffice.innerText = data.avg_vote;
-				modal_content_description.innerText = data.long_description;
-
-				if (data.duration > 60){
-					let hours = Math.floor(data.duration / 60);
-					let minutes = data.duration - (hours*60);
-					modal_content_duration.innerText = hours+"h"+minutes;
-				} else {
-					modal_content_duration.innerText = data.duration+" min";
-				}										
-			})
-		})
-}
-
-/**************************************************************
-Get the best film and set the image and title into the banner
-Set the modal window too with information(...)
-***************************************************************/
-function banner_title(){
-
-	fetch(api_get.concat("page=1").concat(api_request))
-		.then( function(response){			
-					if(response.ok){
-						return response.json();
-					}
-				})
-				.then( function(data){
-					let title = document.getElementById("banner-title");
-					let banner_image = document.getElementById("banner");
-					let banner_button_play = document.getElementById("banner-button--play");
-
-					title.innerText = data.results[0].title;
-					banner_image.style.backgroundImage = "url('"+data.results[0].image_url+"')";
-					
-					let film_id = data.results[0].id;
-					information(banner_image, film_id)
-					information(banner_button_play, film_id)
-				})
-}
 
 /**************************************************************
 There is 5 film per page, so we will fetch 2 pages to get 7 films.
@@ -167,6 +90,27 @@ function leftRightNavigation(carousel_number){
 }
 
 
+/* Set the fist letter of the sentence in uppercase */
+function capitalizer(sentence){
+	result = sentence.charAt(0).toUpperCase() + sentence.slice(1);
+	return result;
+}
+
+/**************************************************************
+- create element for each film for the selected category 
+- set the backgroundimage
+- set the title for each category selected except for topfilm
+***************************************************************/
+function film(image_url, carousel_number, genre){
+	div = document.createElement('div');
+	div.classList.add("film");
+	div.style.backgroundImage = "url('"+image_url+"')";
+	container[carousel_number].appendChild(div);
+
+	if (genre != "topfilm"){
+		carousel_title[carousel_number].innerText = capitalizer(genre);	
+	}
+}
 
 
 

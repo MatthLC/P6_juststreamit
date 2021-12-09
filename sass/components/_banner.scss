@@ -1,0 +1,42 @@
+#banner{
+	width: auto;
+	height: 300px;
+	margin-top: 30px;
+	background-size: cover;
+	color: $text_înside_element;
+	@include shadow;
+	&-box{
+		width: 30%;
+		height: 60%;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		justify-content: flex-end;
+	}
+	&-button--play{
+		border-radius: 15px ;
+		background-color: red;
+		width: 90px;
+		height: 30px;
+		color: $text_înside_element;
+		font-size: 16px;
+		font-weight: bold;
+		@include shadow;
+		@include undo_transition;
+		&:hover{
+			@include do_transition
+		}
+	}
+	&-description{
+		padding-left: 20px;
+		text-align: justify;
+	}
+	&-description{
+		padding-left: 20px;
+		text-align: justify;
+	}
+	&:hover{
+		cursor: pointer;
+	}
+}
