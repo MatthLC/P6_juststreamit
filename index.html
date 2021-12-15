@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="public/css/prefixed/style.css"/>
+		<link rel="stylesheet" type="text/css" media="screen and (max-width: 900px)" href="public/css/small_screen.css"/>
+		<title>Just Stream It</title>
+	</head>
+	<body>
+		<header id="header">
+			<h1 id="header-title">JustStreamIt</h1>
+			<nav id="navigation">
+				<ul id="header__nav">
+					<li class="nav-item"><a href="index.html"> Accueil </a></li>
+					<li class="nav-item"><a href="#"> Catégories </a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section id="banner">
+			<div id="banner-box">
+				<h2 id="banner-title">Titre du film</h2>
+				<button id="banner-button--play">Play</button>
+				<div class="modal"></div>
+			</div>
+			<p id="banner-description"></p>
+		</section>
+
+		<section id="topFilm">
+			<h2 class=carousel-title>Film les mieux notés</h2>
+			<div class=carousel>
+				<img class="button-slide button-slide--left" src="public/img/arrow_left.png">
+				<div class="carousel-films">
+					<div class="container"></div>
+				</div>
+				<img class="button-slide button-slide--right" src="public/img/arrow_right.png">
+			</div>
+		</section>
+
+		<section id="category1">
+			<h2 class=carousel-title>Catégorie 1</h2>
+			<div class=carousel>
+				<img class="button-slide button-slide--left" src="public/img/arrow_left.png">
+				<div class="carousel-films">
+					<div class="container"></div>
+				</div>
+				<img class="button-slide button-slide--right" src="public/img/arrow_right.png">
+			</div>
+		</section>
+
+		<section id="category2">
+			<h2 class=carousel-title>Catégorie 2</h2>
+			<div class=carousel>
+				<img class="button-slide button-slide--left" src="public/img/arrow_left.png">
+				<div class="carousel-films">
+					<div class="container"></div>
+				</div>
+				<img class="button-slide button-slide--right" src="public/img/arrow_right.png">
+			</div>
+		</section>
+
+		<section id="category3">
+			<h2 class=carousel-title>Catégorie 3</h2>
+			<div class=carousel>
+				<img class="button-slide button-slide--left" src="public/img/arrow_left.png">
+				<div class="carousel-films">
+					<div class="container"></div>
+				</div>
+				<img class="button-slide button-slide--right" src="public/img/arrow_right.png">
+			</div>
+		</section>
+
+		<div id="modal">
+			<div id="modal-content">
+				<div id="modal-content--bloc1">
+	    			<div id="modal-content--image"><span id="close">&times;</span></div>
+	    			<div id="modal-content__header">
+	    				<div id="modal-content--title"></div>
+		    			<ul id="modal-content--information">
+		    				<li><img id="modal-content--information---imdb" src="public/img/imdb.png" alt=""></img></li>
+		    				<li id="modal-content--imdb"></li>
+		    				<li id="modal-content--duration"></li>
+		    				<li id="modal-content--published"></li>
+		    			</ul>
+	    			</div>
+
+	    			<p id="modal-content--description"></p>
+    			</div>
+
+				<div id="information">
+    				<div>
+		    			<table>
+		    				<tr >
+		    					<td class="information-column1">Realisateur</td>
+		    					<td class="information-column2">:</td>
+		    					<td id="modal-content--directors" class="information-column3">value</td>
+		    				</tr>
+		    				<tr>
+		    					<td class="information-column1">Acteurs</td>
+		    					<td class="information-column2">:</td>
+		    					<td id="modal-content--actors" class="information-column3 test">value</td>
+		    					
+		    				</tr>
+		    				<tr>
+		    					<td class="information-column1">Genre</td>
+		    					<td class="information-column2">:</td>
+		    					<td id="modal-content--genre" class="information-column3">value</td>
+		    					
+		    				</tr>
+		    			</table>
+	    			</div>
+	    			<div>
+		    			<table>
+		    				<tr >
+		    					<td class="information-column1">Rated</td>
+		    					<td class="information-column2">:</td>
+		    					<td id="modal-content--rated" class="information-column3">value</td>
+		    				</tr>
+		    				<tr>
+		    					
+		    					<td class="information-column1">Pays</td>
+		    					<td class="information-column2">:</td>
+		    					<td id="modal-content--countries" class="information-column3">value</td>
+		    				</tr>
+		    				<tr>
+		    					
+		    					<td class="information-column1">Box Office</td>
+		    					<td class="information-column2">:</td>
+		    					<td id="modal-content--boxoffice" class="information-column3">value</td>
+		    				</tr>
+		    			</table>
+	    			</div>
+    			</div>
+			</div>
+		</div>
+
+		<script src="js/parameters.js"></script>
+		<script src="js/banner.js"></script>
+		<script src="js/carousel.js"></script>
+		<script src="js/modal.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

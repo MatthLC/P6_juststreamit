@@ -1,0 +1,44 @@
+.carousel{
+	width: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&-title{
+		width: auto;
+		margin-top: 30px;
+		text-align: center;
+	}
+	&-films{
+		width: 640px;
+		overflow: hidden;
+	}
+}
+
+.button-slide{
+	width: 40px;
+	height: 40px;
+	@include undo_transition;
+	&:hover{
+		@include do_transition
+	}
+}
+
+.container{
+	width: auto;
+	height: auto;
+}
+
+.film{
+	display: inline-flex;
+	background-size:cover ;
+	width: 150px;
+	height: 200px;
+	margin: 10px 5px 15px 5px;	
+	@include undo_transition;
+	@include shadow;
+	&:hover{
+		@include do_transition;
+	}
+}
+
+
