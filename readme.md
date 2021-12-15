@@ -2,7 +2,7 @@
 
 Interface utilisateur pour une application Python.
 
-Cette page Web propose des films suivant des catégories selon un classement pas note de film quelque soit l'année :
+Cette page Web propose des films suivant des catégories selon un classement par note de film quelque soit l'année :
 - Bannière : le meilleur film.
 - 1er carrousel : 7 meilleurs films aprés celui sélectionné pour la bannière
 - carrousels suivants : 7 meilleurs films de la catégorie affichée.
