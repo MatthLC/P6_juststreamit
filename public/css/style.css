@@ -1,0 +1,264 @@
+body {
+  width: 900px;
+  margin: auto;
+}
+@media (max-width: 900px) {
+  body {
+    width: auto;
+  }
+}
+
+header {
+  background: slategrey;
+  color: whitesmoke;
+}
+
+a:link, a:active, a:visited, a:hover {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+#banner {
+  width: auto;
+  height: 300px;
+  margin-top: 30px;
+  background-size: cover;
+  color: whitesmoke;
+  box-shadow: 0px 2px 5px #1c1a19;
+}
+#banner-box {
+  width: 30%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-end;
+}
+#banner-button--play {
+  border-radius: 15px;
+  background-color: red;
+  width: 90px;
+  height: 30px;
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0px 2px 5px #1c1a19;
+  transition: 0.3s ease-out;
+}
+#banner-button--play:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+#banner-description {
+  padding-left: 20px;
+  text-align: justify;
+}
+#banner-description {
+  padding-left: 20px;
+  text-align: justify;
+}
+#banner:hover {
+  cursor: pointer;
+}
+
+.carousel {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carousel-title {
+  width: auto;
+  margin-top: 30px;
+  text-align: center;
+}
+.carousel-films {
+  width: 640px;
+  overflow: hidden;
+}
+
+.button-slide {
+  width: 40px;
+  height: 40px;
+  transition: 0.3s ease-out;
+}
+.button-slide:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.container {
+  width: auto;
+  height: auto;
+}
+
+.film {
+  display: inline-flex;
+  background-size: cover;
+  width: 150px;
+  height: 200px;
+  margin: 10px 5px 15px 5px;
+  transition: 0.3s ease-out;
+  box-shadow: 0px 2px 5px #1c1a19;
+}
+.film:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+#modal {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  align-items: center;
+}
+
+#modal-content {
+  background-color: white;
+  width: 800px;
+  height: 500px;
+  text-align: center;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0px 2px 5px #1c1a19;
+}
+
+#close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  background-color: darkorange;
+  width: 20px;
+  height: 20px;
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+  float: right;
+  border-radius: 20px;
+  border: black solid;
+  border-width: 1px 1px 1px 1px;
+  font-weight: bold;
+}
+#close:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+#modal-content--bloc1 {
+  min-height: 210px;
+}
+
+#modal-content--image {
+  width: 150px;
+  height: 200px;
+  float: right;
+  margin: 5px;
+  background-size: cover;
+}
+
+#modal-content__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+
+#modal-content--information {
+  display: flex;
+  margin: 0;
+}
+
+#modal-content--information---imdb {
+  width: 30px;
+  height: 15px;
+}
+
+#modal-content--information > li {
+  padding-right: 15px;
+  list-style-type: none;
+}
+
+#modal-content--title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 180%;
+  font-weight: bold;
+}
+
+#modal-content--description {
+  margin-top: 20px;
+  text-align: justify;
+  padding: 5px;
+}
+
+#information {
+  display: flex;
+  margin-top: 50px;
+}
+
+.information-column1 {
+  width: 75px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.information-column2 {
+  width: 10px;
+  font-weight: bold;
+}
+
+.information-column3 {
+  width: 300px;
+  text-align: left;
+}
+
+header {
+  background: slategrey;
+  color: whitesmoke;
+  width: auto;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: default;
+}
+
+#header-title {
+  padding-left: 10px;
+  margin: 0;
+  vertical-align: middle;
+}
+
+#header__nav {
+  display: flex;
+  list-style-type: none;
+  margin-right: 200px;
+}
+
+.nav-item {
+  margin-right: 30px;
+  font-size: 20px;
+  text-decoration: none;
+  color: whitesmoke;
+  transition: 0.3s ease-out;
+}
+.nav-item:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
